@@ -1,0 +1,321 @@
+:root {
+  --primary-color: #3498db; /* Adjust primary color */
+  --hover-color: #2980b9; /* Adjust hover color */
+  --text-color: #2c3e50; /* Adjust text color */
+  --heading-color: #1abc9c; /* Adjust heading color */
+  --border-color: #ecf0f1; /* Adjust border color */
+  --table-border: #bdc3c7; /* Adjust table border color */
+  --table-header-bg: #34495e; /* Adjust table header background */
+  --table-header-color: #ffffff; /* Adjust table header text color */
+  --table-row-bg: #ecf0f1; /* Adjust table row background */
+  --table-row-alt-bg: #f9f9f9; /* Adjust alternate row background */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Adjust shadow color */
+  --background-color: #f4f6f7; /* Adjust background color */
+  --section-bg: #ffffff; /* Adjust section background */
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: var(--section-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  background-color: var(--section-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--table-border);
+  color: var(--text-color);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-color);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr {
+  background-color: var(--table-row-bg);
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-row-alt-bg);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+section h1, section h2 {
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: bold;
+}
+
+.results section {
+  background-color: var(--section-bg);
+}
+
+.results h1, .results h2 {
+  color: var(--heading-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+tr:hover, td:hover {
+  background-color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
+}
+
+.results-container {
+  padding: 20px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  background-color: var(--section-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.results-table th,
+.results-table td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid var(--table-border);
+  color: var(--text-color);
+}
+
+.results-table th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-color);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-table tr {
+  background-color: var(--table-row-bg);
+}
+
+.results-table tr:nth-child(even) {
+  background-color: var(--table-row-alt-bg);
+}
+
+.results-table tr:last-child td {
+  border-bottom: none;
+}
+
+.results-table td {
+  background-color: var(--table-row-bg);
+}
+
+.results-table tr:nth-child(even) td {
+  background-color: var(--table-row-alt-bg);
+}
+
+.results-container h1,
+.results-container h2 {
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: bold;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.login-box {
+    background-color: var(--section-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.login-button:hover {
+    background-color: var(--hover-color);
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.demo-credentials {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.demo-credentials h3 {
+    color: var(--heading-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.demo-credentials p {
+    margin: 8px 0;
+    color: var(--text-color);
+}
+
+.demo-credentials .note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+.dark-mode .demo-credentials .note {
+    color: #aaa;
+}
